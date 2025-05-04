@@ -13,9 +13,9 @@ PlannH3R: the app that syncs your productivity with your menstrual cycle. Plan y
 
 ---
 
-# Problem
+# 💢 Problem
 
-**Lack of awareness about how the menstrual cycle affects productivity**  
+- **Lack of awareness about how the menstrual cycle affects productivity**  
 Women experience fluctuations in energy and productivity throughout the cycle, but there’s often little awareness of how these changes impact daily performance.
 
 - **Disconnection between well-being and goals**  
@@ -26,7 +26,7 @@ There are no solutions that encourage task completion, promote discipline, rewar
 
 ---
 
-# Solution
+# 💡 Solution
 
 PlannH3R syncs productivity with the phases of the menstrual cycle through a personalized calendar that adapts and suggests tasks and projects for each phase. It promotes efficient planning and motivation through rewards and access to wellness products and services upon achieving goals, while helping users understand how the body-mind connection boosts productivity.
 
@@ -87,6 +87,8 @@ Enables interoperability between Solenium and Arbitrum, allowing the integration
 # 🎥 Demo
 
 [Link to demo video or screenshots (coming soon)]
+
+[Demo](https://drive.google.com/drive/folders/13osfooYcu4KTodSf7AW_Q3P8S04qvk7P?usp=sharing)
 
 ---
 
