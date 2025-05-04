@@ -39,7 +39,8 @@ PlannH3R syncs productivity with the phases of the menstrual cycle through a per
 - 🪙 **Chatbot**: Suggestions based on your history and support for daily planning.
 - 📲 **Integrations and Dashboard**: Sync with smartwatches and apps for real-time metrics and comprehensive tracking. Detailed analysis of your cycle and goal progress. Real-time dashboards to monitor daily task completion.
 
-![PlannH3R Image](https://github.com/liz-durang/plannh3r-ethcdm-hackathon/blob/main/packages/nextjs/public/plannh3r-ini.jpg)  
+<img src="https://github.com/liz-durang/plannh3r-ethcdm-hackathon/blob/main/packages/nextjs/public/plannh3r-ini.jpg" alt="PlannH3R Image" width="100"/>
+
 
 
 ---
