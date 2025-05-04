@@ -2,7 +2,7 @@
 
 **Organiza tu vida, sincronízala con tu ciclo y recompensa tu esfuerzo**
 
-![Imagen de PlannH3R](https://github.com/liz-durang/LearningPass/blob/main/packages/nextjs/public/LearningPass.jpg)  
+![Imagen de PlannH3R](https://github.com/liz-durang/plannh3r-ethcdm-hackathon/blob/main/packages/nextjs/public/PlannH3r%20-%20banner.jpg)  
 [Hackathon ETHCDM](https://taikai.network/en/ethcdm/hackathons/ethcdm-2/overview) 
 
 ---
@@ -46,8 +46,6 @@ PlannH3R sincroniza la productividad con las fases del ciclo menstrual mediante 
 - **Frontend:** React.js + TailwindCSS 
 - **Backend:** Node.js + Express
 - **Blockchain:** Solenium + MXNB + Hyperlane 
-
-[Wallet Used Transactions](https://soneium-minato.blockscout.com/address/0x5d4f7Fe457A8B23c2449a585EC980E35275fa469?tab=txs)
 
 ---
 
