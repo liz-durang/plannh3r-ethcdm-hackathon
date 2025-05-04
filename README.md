@@ -86,7 +86,6 @@ Enables interoperability between Solenium and Arbitrum, allowing the integration
 
 # 🎥 Demo
 
-[Link to demo video or screenshots (coming soon)]
 
 [Demo](https://drive.google.com/drive/folders/13osfooYcu4KTodSf7AW_Q3P8S04qvk7P?usp=sharing)
 
