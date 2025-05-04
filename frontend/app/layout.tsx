@@ -28,7 +28,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${merriweather.variable} ${openSans.variable} font-sans bg-cream`}>{children}</body>
+      <body className={`${merriweather.variable} ${openSans.variable} font-sans bg-cream`}>
+        {children}
+      </body>
     </html>
   )
 }

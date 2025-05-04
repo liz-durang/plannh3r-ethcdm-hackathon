@@ -46,10 +46,12 @@ function Calendar({
           buttonVariants({ variant: "ghost" }),
           "h-8 w-8 p-0 font-normal aria-selected:opacity-100"
         ),
-        day_range_start: "day-range-start",
-        day_range_end: "day-range-end",
+        day_range_start:
+          "bg-[#D8A18B] text-white transition-colors duration-200 hover:bg-[#FFF6E8] hover:text-[#6C5F58] focus:bg-[#D8A18B] focus:text-white",
+        day_range_end:
+          "bg-[#D8A18B] text-white transition-colors duration-200 hover:bg-[#FFF6E8] hover:text-[#6C5F58] focus:bg-[#D8A18B] focus:text-white",
         day_selected:
-          "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
+          "bg-[#F4CDA2] text-[#6C5F58] transition-colors duration-200 hover:bg-[#FFF6E8] hover:text-[#6C5F58] focus:bg-[#F4CDA2] focus:text-[#6C5F58]",
         day_today: "bg-accent text-accent-foreground",
         day_outside:
           "day-outside text-muted-foreground aria-selected:bg-accent/50 aria-selected:text-muted-foreground",
@@ -61,10 +63,10 @@ function Calendar({
       }}
       components={{
         IconLeft: ({ className, ...props }) => (
-          <ChevronLeft className={cn("h-4 w-4", className)} {...props} />
+          <ChevronLeft className={cn("h-4 w-4 text-[#E6DED6]", className)} {...props} />
         ),
         IconRight: ({ className, ...props }) => (
-          <ChevronRight className={cn("h-4 w-4", className)} {...props} />
+          <ChevronRight className={cn("h-4 w-4 text-[#E6DED6]", className)} {...props} />
         ),
       }}
       {...props}

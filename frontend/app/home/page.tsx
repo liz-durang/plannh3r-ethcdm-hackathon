@@ -7,6 +7,7 @@ import { CalendarView } from "@/components/calendar-view"
 import { CyclePhaseIndicator } from "@/components/cycle-phase-indicator"
 import { AddActivityModal } from "@/components/add-activity-modal"
 import { Chatbot } from "@/components/chatbot"
+import { TopNavBar } from "@/components/TopNavBar"
 
 // Mock data for demonstration
 const mockEvents = [
@@ -74,80 +75,83 @@ export default function HomePage() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col">
-      <header className={`p-4 ${currentPhase.color} text-white`}>
-        <CyclePhaseIndicator phase={currentPhase} />
-      </header>
+    <>
+      <TopNavBar />
+      <main className="flex min-h-screen flex-col pt-14">
+        <header className={`p-4 ${currentPhase.color} text-white`}>
+          <CyclePhaseIndicator phase={currentPhase} />
+        </header>
 
-      <div className="flex-1 p-4">
-        <CalendarView
-          events={events}
-          onEventClick={handleEventClick}
-          onToggleComplete={toggleEventComplete}
-          cycleStartDate={new Date(2023, 4, 1)} // Mock data - would come from user settings
-          cycleDuration={28} // Mock data - would come from user settings
-        />
-      </div>
+        <div className="flex-1 p-4">
+          <CalendarView
+            events={events}
+            onEventClick={handleEventClick}
+            onToggleComplete={toggleEventComplete}
+            cycleStartDate={new Date(2023, 4, 1)} // Mock data - would come from user settings
+            cycleDuration={28} // Mock data - would come from user settings
+          />
+        </div>
 
-      {/* Floating action button with menu */}
-      <div className="fixed bottom-6 right-6 flex flex-col items-end space-y-2">
-        {showFloatingMenu && (
-          <>
-            <button
-              onClick={() => {
-                setIsChatbotOpen(true)
-                setShowFloatingMenu(false)
-              }}
-              className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center shadow-lg"
-              aria-label="Abrir chatbot"
-            >
-              <Bot size={22} />
-            </button>
-            <button
-              onClick={() => {
-                setIsActivityModalOpen(true)
-                setShowFloatingMenu(false)
-              }}
-              className="w-12 h-12 rounded-full bg-mustard text-primary-foreground flex items-center justify-center shadow-lg"
-              aria-label="Agregar actividad"
-            >
-              <Plus size={22} />
-            </button>
-          </>
-        )}
-        <button
-          onClick={() => setShowFloatingMenu(!showFloatingMenu)}
-          className="w-14 h-14 rounded-full bg-mustard text-primary-foreground flex items-center justify-center shadow-lg z-10"
-          aria-label={showFloatingMenu ? "Cerrar menú" : "Abrir menú"}
-        >
-          <Plus size={24} className={`transition-transform ${showFloatingMenu ? "rotate-45" : ""}`} />
-        </button>
-      </div>
-
-      {/* Modals */}
-      <AddActivityModal isOpen={isActivityModalOpen} onClose={() => setIsActivityModalOpen(false)} />
-
-      {isChatbotOpen && (
-        <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <div className="bg-cream rounded-2xl w-full max-w-md h-[600px] overflow-hidden">
-            <div className="flex items-center justify-between p-4 border-b border-brown/20">
-              <div className="flex items-center gap-2">
-                <div className="h-8 w-8 rounded-full bg-accent flex items-center justify-center text-white">
-                  <Bot size={18} />
-                </div>
-                <h2 className="text-xl font-semibold text-brown">Asistente PlannH3R</h2>
-              </div>
-              <button onClick={() => setIsChatbotOpen(false)} className="p-1 rounded-full hover:bg-brown/10">
-                <span className="sr-only">Cerrar</span>
-                <X size={24} className="text-brown" />
+        {/* Floating action button with menu */}
+        <div className="fixed bottom-6 right-6 flex flex-col items-end space-y-2">
+          {showFloatingMenu && (
+            <>
+              <button
+                onClick={() => {
+                  setIsChatbotOpen(true)
+                  setShowFloatingMenu(false)
+                }}
+                className="w-12 h-12 rounded-full bg-accent text-white flex items-center justify-center shadow-lg"
+                aria-label="Abrir chatbot"
+              >
+                <Bot size={22} />
               </button>
-            </div>
-            <div className="h-[calc(100%-64px)]">
-              <Chatbot />
+              <button
+                onClick={() => {
+                  setIsActivityModalOpen(true)
+                  setShowFloatingMenu(false)
+                }}
+                className="w-12 h-12 rounded-full bg-mustard text-primary-foreground flex items-center justify-center shadow-lg"
+                aria-label="Agregar actividad"
+              >
+                <Plus size={22} />
+              </button>
+            </>
+          )}
+          <button
+            onClick={() => setShowFloatingMenu(!showFloatingMenu)}
+            className="w-14 h-14 rounded-full bg-mustard text-primary-foreground flex items-center justify-center shadow-lg z-10"
+            aria-label={showFloatingMenu ? "Cerrar menú" : "Abrir menú"}
+          >
+            <Plus size={24} className={`transition-transform ${showFloatingMenu ? "rotate-45" : ""}`} />
+          </button>
+        </div>
+
+        {/* Modals */}
+        <AddActivityModal isOpen={isActivityModalOpen} onClose={() => setIsActivityModalOpen(false)} />
+
+        {isChatbotOpen && (
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
+            <div className="bg-cream rounded-2xl w-full max-w-md h-[600px] overflow-hidden">
+              <div className="flex items-center justify-between p-4 border-b border-brown/20">
+                <div className="flex items-center gap-2">
+                  <div className="h-8 w-8 rounded-full bg-accent flex items-center justify-center text-white">
+                    <Bot size={18} />
+                  </div>
+                  <h2 className="text-xl font-semibold text-brown">Asistente PlannH3R</h2>
+                </div>
+                <button onClick={() => setIsChatbotOpen(false)} className="p-1 rounded-full hover:bg-brown/10">
+                  <span className="sr-only">Cerrar</span>
+                  <X size={24} className="text-brown" />
+                </button>
+              </div>
+              <div className="h-[calc(100%-64px)]">
+                <Chatbot />
+              </div>
             </div>
           </div>
-        </div>
-      )}
-    </main>
+        )}
+      </main>
+    </>
   )
 }

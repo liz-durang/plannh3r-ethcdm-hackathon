@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation"
 import { Slider } from "@/components/ui/slider"
 import { Progress } from "@/components/ui/progress"
 import { ArrowRight, Gift, ChevronLeft, ChevronRight } from "lucide-react"
+import { TopNavBar } from "@/components/TopNavBar"
 
 export default function StakingPage() {
   const [amount, setAmount] = useState(100)
@@ -270,107 +271,112 @@ export default function StakingPage() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start p-6" style={{ backgroundColor: "#D18C85" }}>
-      <div className="max-w-md w-full space-y-8 bg-cream/90 p-6 rounded-2xl shadow-sm">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-brown">Staking</h1>
-          <p className="mt-2 text-brown/70">Recompénsate por mantener tu compromiso contigo misma</p>
-        </div>
-
-        {/* Token selector */}
-        <div className="bg-white/70 p-3 rounded-lg">
-          <h3 className="text-sm font-medium text-brown mb-2">Staking con diferentes tokens</h3>
-          <div className="flex gap-2 overflow-x-auto pb-2">
-            {tokens.map((token) => (
-              <button
-                key={token.name}
-                className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-sm whitespace-nowrap ${
-                  token.name === "USDC"
-                    ? "bg-mustard text-primary-foreground"
-                    : "bg-brown/10 text-brown hover:bg-brown/20"
-                }`}
-              >
-                <span>{token.icon}</span>
-                <span>{token.name}</span>
-                <span className="font-medium">({token.balance})</span>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Navigation tabs */}
-        <div className="flex flex-col space-y-4">
-          <div className="flex justify-between items-center">
-            <button
-              onClick={() => {
-                const tabs = ["configure", "withdraw", "history", "donate"]
-                const currentIndex = tabs.indexOf(activeTab)
-                const prevIndex = currentIndex > 0 ? currentIndex - 1 : tabs.length - 1
-                setActiveTab(tabs[prevIndex])
-              }}
-              className="p-2 rounded-full hover:bg-brown/10"
-            >
-              <ChevronLeft size={20} className="text-brown" />
-            </button>
-
+    <>
+      <TopNavBar />
+      <main className="pt-14">
+        <div className="flex min-h-screen flex-col items-center justify-start p-6" style={{ backgroundColor: "#D18C85" }}>
+          <div className="max-w-md w-full space-y-8 bg-cream/90 p-6 rounded-2xl shadow-sm">
             <div className="text-center">
-              <button
-                onClick={() => setActiveTab("configure")}
-                className={`px-3 py-1 mx-1 rounded-full text-sm ${
-                  activeTab === "configure" ? "bg-mustard text-primary-foreground" : "text-brown"
-                }`}
-              >
-                1
-              </button>
-              <button
-                onClick={() => setActiveTab("withdraw")}
-                className={`px-3 py-1 mx-1 rounded-full text-sm ${
-                  activeTab === "withdraw" ? "bg-mustard text-primary-foreground" : "text-brown"
-                }`}
-              >
-                2
-              </button>
-              <button
-                onClick={() => setActiveTab("history")}
-                className={`px-3 py-1 mx-1 rounded-full text-sm ${
-                  activeTab === "history" ? "bg-mustard text-primary-foreground" : "text-brown"
-                }`}
-              >
-                3
-              </button>
-              <button
-                onClick={() => setActiveTab("donate")}
-                className={`px-3 py-1 mx-1 rounded-full text-sm ${
-                  activeTab === "donate" ? "bg-mustard text-primary-foreground" : "text-brown"
-                }`}
-              >
-                4
-              </button>
+              <h1 className="text-2xl font-bold text-brown">Staking</h1>
+              <p className="mt-2 text-brown/70">Recompénsate por mantener tu compromiso contigo misma</p>
             </div>
 
-            <button
-              onClick={() => {
-                const tabs = ["configure", "withdraw", "history", "donate"]
-                const currentIndex = tabs.indexOf(activeTab)
-                const nextIndex = currentIndex < tabs.length - 1 ? currentIndex + 1 : 0
-                setActiveTab(tabs[nextIndex])
-              }}
-              className="p-2 rounded-full hover:bg-brown/10"
-            >
-              <ChevronRight size={20} className="text-brown" />
-            </button>
+            {/* Token selector */}
+            <div className="bg-white/70 p-3 rounded-lg">
+              <h3 className="text-sm font-medium text-brown mb-2">Staking con diferentes tokens</h3>
+              <div className="flex gap-2 overflow-x-auto pb-2">
+                {tokens.map((token) => (
+                  <button
+                    key={token.name}
+                    className={`flex items-center gap-1 px-3 py-1.5 rounded-full text-sm whitespace-nowrap ${
+                      token.name === "USDC"
+                        ? "bg-mustard text-primary-foreground"
+                        : "bg-brown/10 text-brown hover:bg-brown/20"
+                    }`}
+                  >
+                    <span>{token.icon}</span>
+                    <span>{token.name}</span>
+                    <span className="font-medium">({token.balance})</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation tabs */}
+            <div className="flex flex-col space-y-4">
+              <div className="flex justify-between items-center">
+                <button
+                  onClick={() => {
+                    const tabs = ["configure", "withdraw", "history", "donate"]
+                    const currentIndex = tabs.indexOf(activeTab)
+                    const prevIndex = currentIndex > 0 ? currentIndex - 1 : tabs.length - 1
+                    setActiveTab(tabs[prevIndex])
+                  }}
+                  className="p-2 rounded-full hover:bg-brown/10"
+                >
+                  <ChevronLeft size={20} className="text-brown" />
+                </button>
+
+                <div className="text-center">
+                  <button
+                    onClick={() => setActiveTab("configure")}
+                    className={`px-3 py-1 mx-1 rounded-full text-sm ${
+                      activeTab === "configure" ? "bg-mustard text-primary-foreground" : "text-brown"
+                    }`}
+                  >
+                    1
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("withdraw")}
+                    className={`px-3 py-1 mx-1 rounded-full text-sm ${
+                      activeTab === "withdraw" ? "bg-mustard text-primary-foreground" : "text-brown"
+                    }`}
+                  >
+                    2
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("history")}
+                    className={`px-3 py-1 mx-1 rounded-full text-sm ${
+                      activeTab === "history" ? "bg-mustard text-primary-foreground" : "text-brown"
+                    }`}
+                  >
+                    3
+                  </button>
+                  <button
+                    onClick={() => setActiveTab("donate")}
+                    className={`px-3 py-1 mx-1 rounded-full text-sm ${
+                      activeTab === "donate" ? "bg-mustard text-primary-foreground" : "text-brown"
+                    }`}
+                  >
+                    4
+                  </button>
+                </div>
+
+                <button
+                  onClick={() => {
+                    const tabs = ["configure", "withdraw", "history", "donate"]
+                    const currentIndex = tabs.indexOf(activeTab)
+                    const nextIndex = currentIndex < tabs.length - 1 ? currentIndex + 1 : 0
+                    setActiveTab(tabs[nextIndex])
+                  }}
+                  className="p-2 rounded-full hover:bg-brown/10"
+                >
+                  <ChevronRight size={20} className="text-brown" />
+                </button>
+              </div>
+
+              {renderTabContent()}
+            </div>
+
+            <div className="flex justify-center pt-4">
+              <button onClick={() => router.push("/home")} className="flex items-center text-brown hover:underline text-sm">
+                <ArrowRight size={16} className="rotate-180 mr-1" />
+                <span>Volver al inicio</span>
+              </button>
+            </div>
           </div>
-
-          {renderTabContent()}
         </div>
-
-        <div className="flex justify-center pt-4">
-          <button onClick={() => router.push("/home")} className="flex items-center text-brown hover:underline text-sm">
-            <ArrowRight size={16} className="rotate-180 mr-1" />
-            <span>Volver al inicio</span>
-          </button>
-        </div>
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
