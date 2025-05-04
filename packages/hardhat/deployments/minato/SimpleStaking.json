@@ -1,0 +1,265 @@
+{
+  "address": "0xAFC93e8aBcDE5B5De170B301fC3D429ca3C244b3",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_stakingToken",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_rewardRate",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_lockTime",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "contractTag",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "user",
+          "type": "address"
+        }
+      ],
+      "name": "getStakeInfo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "lockTime",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rewardRate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "stake",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "stakes",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "stakingToken",
+      "outputs": [
+        {
+          "internalType": "contract IERC20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x6b7d6737aaa335b188af6642aa4ede7bf6f5942525dfc225a5b07cb4d1e769c2",
+  "receipt": {
+    "to": null,
+    "from": "0x5d4f7Fe457A8B23c2449a585EC980E35275fa469",
+    "contractAddress": "0xAFC93e8aBcDE5B5De170B301fC3D429ca3C244b3",
+    "transactionIndex": 1,
+    "gasUsed": "477539",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x3d60e63bd2fab954f9347d3f2032d934b795ba36c198f95ecce6755a3e992430",
+    "transactionHash": "0x6b7d6737aaa335b188af6642aa4ede7bf6f5942525dfc225a5b07cb4d1e769c2",
+    "logs": [],
+    "blockNumber": 11575931,
+    "cumulativeGasUsed": "523695",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [
+    "0xD27E94c348DFd1b22c949eB529CaFACFCE189EBf",
+    100,
+    31536000
+  ],
+  "numDeployments": 1,
+  "solcInputHash": "88b44a3a6cdaa57e8e96e300340a76f8",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_stakingToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_rewardRate\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_lockTime\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[],\"name\":\"contractTag\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"user\",\"type\":\"address\"}],\"name\":\"getStakeInfo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lockTime\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"rewardRate\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"stake\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"stakes\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"stakingToken\",\"outputs\":[{\"internalType\":\"contract IERC20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/SimpleStaking.sol\":\"SimpleStaking\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"contracts/SimpleStaking.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\npragma solidity ^0.8.18;\\n\\ninterface IERC20 {\\n    function transfer(address recipient, uint256 amount) external returns (bool);\\n    function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);\\n}\\n\\ncontract SimpleStaking {\\n    IERC20 public stakingToken;\\n    uint256 public rewardRate; // Porcentaje de recompensa en base 1000 (ej: 50 = 5%)\\n    uint256 public lockTime;   // Tiempo m\\u00ednimo de staking en segundos\\n\\n    string public constant contractTag = \\\"Simple Staking Contract!\\\";\\n\\n    struct Stake {\\n        uint256 amount;\\n        uint256 timestamp;\\n    }\\n\\n    mapping(address => Stake) public stakes;\\n\\n    constructor(address _stakingToken, uint256 _rewardRate, uint256 _lockTime) {\\n        stakingToken = IERC20(_stakingToken);\\n        rewardRate = _rewardRate; // ej. 50 = 5%\\n        lockTime = _lockTime;     // ej. 604800 = 7 d\\u00edas\\n    }\\n\\n    function stake(uint256 amount) external {\\n        require(amount > 0, \\\"Debes stakear un monto > 0\\\");\\n        require(stakes[msg.sender].amount == 0, \\\"Ya tienes un stake activo\\\");\\n\\n        require(stakingToken.transferFrom(msg.sender, address(this), amount), \\\"Fallo la transferencia\\\");\\n\\n        stakes[msg.sender] = Stake({\\n            amount: amount,\\n            timestamp: block.timestamp\\n        });\\n    }\\n\\n    function withdraw() external {\\n        Stake memory userStake = stakes[msg.sender];\\n        require(userStake.amount > 0, \\\"No tienes stake activo\\\");\\n\\n        uint256 stakingDuration = block.timestamp - userStake.timestamp;\\n        uint256 reward = 0;\\n\\n        if (stakingDuration >= lockTime) {\\n            reward = (userStake.amount * rewardRate) / 1000;\\n        }\\n\\n        delete stakes[msg.sender];\\n\\n        require(stakingToken.transfer(msg.sender, userStake.amount + reward), \\\"Fallo el retiro\\\");\\n    }\\n\\n    function getStakeInfo(address user) external view returns (uint256 amount, uint256 timestamp) {\\n        Stake memory s = stakes[user];\\n        return (s.amount, s.timestamp);\\n    }\\n}\\n\",\"keccak256\":\"0xa0af8511a1d311cd1212204623832cef6c626a051e94de0364630d3cfe9a7513\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060405161071938038061071983398101604081905261002f9161005b565b600080546001600160a01b0319166001600160a01b03949094169390931790925560015560025561009e565b60008060006060848603121561007057600080fd5b83516001600160a01b038116811461008757600080fd5b602085015160409095015190969495509392505050565b61066c806100ad6000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c80637b0a47ee1161005b5780637b0a47ee1461011a5780639256393914610123578063a694fc3a1461016c578063c34531531461017f57600080fd5b80630d6680871461008d57806316934fc4146100a95780633ccfd60b146100e557806372f702f3146100ef575b600080fd5b61009660025481565b6040519081526020015b60405180910390f35b6100d06100b7366004610502565b6003602052600090815260409020805460019091015482565b604080519283526020830191909152016100a0565b6100ed6101c5565b005b600054610102906001600160a01b031681565b6040516001600160a01b0390911681526020016100a0565b61009660015481565b61015f6040518060400160405280601881526020017f53696d706c65205374616b696e6720436f6e747261637421000000000000000081525081565b6040516100a09190610532565b6100ed61017a366004610580565b610364565b6100d061018d366004610502565b6001600160a01b0316600090815260036020908152604091829020825180840190935280548084526001909101549290910182905291565b33600090815260036020908152604091829020825180840190935280548084526001909101549183019190915261023c5760405162461bcd60e51b81526020600482015260166024820152754e6f207469656e6573207374616b652061637469766f60501b60448201526064015b60405180910390fd5b600081602001514261024e91906105af565b90506000600254821061027a5760015483516103e89161026d916105c8565b61027791906105df565b90505b3360008181526003602052604081208181556001018190555484516001600160a01b039091169163a9059cbb916102b2908590610601565b6040516001600160e01b031960e085901b1681526001600160a01b03909216600483015260248201526044016020604051808303816000875af11580156102fd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103219190610614565b61035f5760405162461bcd60e51b815260206004820152600f60248201526e46616c6c6f20656c2072657469726f60881b6044820152606401610233565b505050565b600081116103b45760405162461bcd60e51b815260206004820152601a60248201527f4465626573207374616b65617220756e206d6f6e746f203e20300000000000006044820152606401610233565b33600090815260036020526040902054156104115760405162461bcd60e51b815260206004820152601960248201527f5961207469656e657320756e207374616b652061637469766f000000000000006044820152606401610233565b6000546040516323b872dd60e01b8152336004820152306024820152604481018390526001600160a01b03909116906323b872dd906064016020604051808303816000875af1158015610468573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061048c9190610614565b6104d15760405162461bcd60e51b815260206004820152601660248201527546616c6c6f206c61207472616e73666572656e63696160501b6044820152606401610233565b6040805180820182529182524260208084019182523360009081526003909152919091209151825551600190910155565b60006020828403121561051457600080fd5b81356001600160a01b038116811461052b57600080fd5b9392505050565b600060208083528351808285015260005b8181101561055f57858101830151858201604001528201610543565b506000604082860101526040601f19601f8301168501019250505092915050565b60006020828403121561059257600080fd5b5035919050565b634e487b7160e01b600052601160045260246000fd5b818103818111156105c2576105c2610599565b92915050565b80820281158282048414176105c2576105c2610599565b6000826105fc57634e487b7160e01b600052601260045260246000fd5b500490565b808201808211156105c2576105c2610599565b60006020828403121561062657600080fd5b8151801515811461052b57600080fdfea26469706673582212208d6ccf97885ac6d767c752d77b1bb24330bd39ec76252481efdd408a0bab5ef464736f6c63430008140033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c80637b0a47ee1161005b5780637b0a47ee1461011a5780639256393914610123578063a694fc3a1461016c578063c34531531461017f57600080fd5b80630d6680871461008d57806316934fc4146100a95780633ccfd60b146100e557806372f702f3146100ef575b600080fd5b61009660025481565b6040519081526020015b60405180910390f35b6100d06100b7366004610502565b6003602052600090815260409020805460019091015482565b604080519283526020830191909152016100a0565b6100ed6101c5565b005b600054610102906001600160a01b031681565b6040516001600160a01b0390911681526020016100a0565b61009660015481565b61015f6040518060400160405280601881526020017f53696d706c65205374616b696e6720436f6e747261637421000000000000000081525081565b6040516100a09190610532565b6100ed61017a366004610580565b610364565b6100d061018d366004610502565b6001600160a01b0316600090815260036020908152604091829020825180840190935280548084526001909101549290910182905291565b33600090815260036020908152604091829020825180840190935280548084526001909101549183019190915261023c5760405162461bcd60e51b81526020600482015260166024820152754e6f207469656e6573207374616b652061637469766f60501b60448201526064015b60405180910390fd5b600081602001514261024e91906105af565b90506000600254821061027a5760015483516103e89161026d916105c8565b61027791906105df565b90505b3360008181526003602052604081208181556001018190555484516001600160a01b039091169163a9059cbb916102b2908590610601565b6040516001600160e01b031960e085901b1681526001600160a01b03909216600483015260248201526044016020604051808303816000875af11580156102fd573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906103219190610614565b61035f5760405162461bcd60e51b815260206004820152600f60248201526e46616c6c6f20656c2072657469726f60881b6044820152606401610233565b505050565b600081116103b45760405162461bcd60e51b815260206004820152601a60248201527f4465626573207374616b65617220756e206d6f6e746f203e20300000000000006044820152606401610233565b33600090815260036020526040902054156104115760405162461bcd60e51b815260206004820152601960248201527f5961207469656e657320756e207374616b652061637469766f000000000000006044820152606401610233565b6000546040516323b872dd60e01b8152336004820152306024820152604481018390526001600160a01b03909116906323b872dd906064016020604051808303816000875af1158015610468573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061048c9190610614565b6104d15760405162461bcd60e51b815260206004820152601660248201527546616c6c6f206c61207472616e73666572656e63696160501b6044820152606401610233565b6040805180820182529182524260208084019182523360009081526003909152919091209151825551600190910155565b60006020828403121561051457600080fd5b81356001600160a01b038116811461052b57600080fd5b9392505050565b600060208083528351808285015260005b8181101561055f57858101830151858201604001528201610543565b506000604082860101526040601f19601f8301168501019250505092915050565b60006020828403121561059257600080fd5b5035919050565b634e487b7160e01b600052601160045260246000fd5b818103818111156105c2576105c2610599565b92915050565b80820281158282048414176105c2576105c2610599565b6000826105fc57634e487b7160e01b600052601260045260246000fd5b500490565b808201808211156105c2576105c2610599565b60006020828403121561062657600080fd5b8151801515811461052b57600080fdfea26469706673582212208d6ccf97885ac6d767c752d77b1bb24330bd39ec76252481efdd408a0bab5ef464736f6c63430008140033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 543,
+        "contract": "contracts/SimpleStaking.sol:SimpleStaking",
+        "label": "stakingToken",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_contract(IERC20)540"
+      },
+      {
+        "astId": 545,
+        "contract": "contracts/SimpleStaking.sol:SimpleStaking",
+        "label": "rewardRate",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 547,
+        "contract": "contracts/SimpleStaking.sol:SimpleStaking",
+        "label": "lockTime",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 560,
+        "contract": "contracts/SimpleStaking.sol:SimpleStaking",
+        "label": "stakes",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_struct(Stake)555_storage)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_contract(IERC20)540": {
+        "encoding": "inplace",
+        "label": "contract IERC20",
+        "numberOfBytes": "20"
+      },
+      "t_mapping(t_address,t_struct(Stake)555_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct SimpleStaking.Stake)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Stake)555_storage"
+      },
+      "t_struct(Stake)555_storage": {
+        "encoding": "inplace",
+        "label": "struct SimpleStaking.Stake",
+        "members": [
+          {
+            "astId": 552,
+            "contract": "contracts/SimpleStaking.sol:SimpleStaking",
+            "label": "amount",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 554,
+            "contract": "contracts/SimpleStaking.sol:SimpleStaking",
+            "label": "timestamp",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

@@ -151,6 +151,16 @@ const config: HardhatUserConfig = {
       url: "https://alfajores-forno.celo-testnet.org",
       accounts: [deployerPrivateKey],
     },
+    minato: {
+      url: `https://soneium-minato.rpc.scs.startale.com?apikey=${process.env.MINATO_RPC_API_KEY}`,
+      accounts: [deployerPrivateKey],
+      chainId: 1946,
+    },
+    soneium: {
+      url: "https://rpc.soneium.org",
+      accounts: [deployerPrivateKey],
+      chainId: 1945,
+    },
   },
   // Configuration for harhdat-verify plugin
   etherscan: {
